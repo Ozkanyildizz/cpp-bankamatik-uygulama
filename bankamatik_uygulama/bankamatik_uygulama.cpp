@@ -16,7 +16,7 @@ public:
     };
 
     void bamkamatik_uygulama2() {
-        unordered_map<string, Kullanici> kullanicilar; // Kullan�c�lar� depolamak i�in harita
+        unordered_map<string, Kullanici> kullanicilar; // Kullanicilari depolamak için harita
         char anaIslem;
 
         while (true) {
@@ -34,7 +34,7 @@ public:
             }
 
             switch (anaIslem) {
-            case '1': { // Kullan�c� ekleme
+            case '1': { // Kullanici ekleme
                 string kullaniciAdi;
                 int bakiye, ekHesap;
                 cout << "Yeni kullanici adi: ";
@@ -44,7 +44,7 @@ public:
                 cout << "Ek hesap: ";
                 cin >> ekHesap;
 
-                if (kullanicilar.find(kullaniciAdi) == kullanicilar.end()) { // Eger kullan�c� bulunmad�ysa ekle 
+                if (kullanicilar.find(kullaniciAdi) == kullanicilar.end()) { // Eger kullanici bulunmadiysa ekle 
                     kullanicilar[kullaniciAdi] = { kullaniciAdi, bakiye, ekHesap };
                     cout << kullaniciAdi << " isimli kullanici basariyla eklendi.\n";
                 }
@@ -54,7 +54,7 @@ public:
                 break;
             }
 
-            case '2': { // Kullan�c� silme
+            case '2': { // Eger kullanici silme
                 string kullaniciAdi;
                 cout << "Silmek istediginiz kullanici adi: ";
                 cin >> kullaniciAdi;
@@ -68,7 +68,7 @@ public:
                 break;
             }
 
-            case '3': { // Kullan�c� i�lemleri
+            case '3': { // Eger kullanici islemleri
                 string kullaniciAdi;
                 cout << "Islem yapmak istediginiz kullanici adi: ";
                 cin >> kullaniciAdi;
@@ -95,12 +95,12 @@ public:
                     }
 
                     switch (islem) {
-                    case '1': // Bakiye g�r�nt�leme
+                    case '1': // Bakiye goruntuleme
                         cout << "Ana bakiye: " << kullanici.bakiye << endl;
                         cout << "Ek hesap: " << kullanici.ekHesap << endl;
                         break;
 
-                    case '2': { // Para �ekme
+                    case '2': { // Para cekme
                         int para;
                         cout << "Cekmek istediginiz miktar: ";
                         cin >> para;
@@ -131,7 +131,7 @@ public:
                         break;
                     }
 
-                    case '3': { // Para yat�rma
+                    case '3': { // Para yatirma
                         int para;
                         cout << "Yatirmak istediginiz miktar: ";
                         cin >> para;
